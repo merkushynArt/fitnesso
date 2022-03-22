@@ -1,0 +1,213 @@
+/*
+font-family: 'Permanent Marker', cursive;
+font-family: 'Red Hat Display', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+*/
+
+
+body {
+   font-family: 'Red Hat Display', sans-serif;
+   font-size: 20px;
+   line-height: 36px;
+   color: #081158;
+   background: #EEF0F4;
+}
+
+.container {
+   max-width: 1368px;
+   margin: 0 auto;
+   padding: 0 10px;
+}
+
+.header {
+   padding: 7px 0;
+   background: #fff;
+   position: fixed;
+   width: 100%;
+   z-index: 10;
+
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .logo {
+      font-size: 36px;
+      line-height: 36px;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+      margin-right: 20px;
+      position: relative;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 5px;
+         right: 0;
+         width: 92px;
+         height: 3px;
+         background: #000;
+      }
+   }
+
+   &__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 400px;
+      width: 100%;
+      
+
+      &-item {
+         font-size: 13px;
+         line-height: 22px;
+         text-decoration: none;
+         color: inherit;
+         position: relative;
+         overflow: hidden;
+
+         &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #081158;
+            border-radius: 50px;
+            transform: translateX(-100%);
+            transition: all .2s linear;
+         }
+
+         &:hover {
+            &::before {
+               transform: translateX(0%);
+            }
+         }
+
+         &.btn {
+            padding: 12px 20px;
+            text-transform: uppercase;
+            background: #081158;
+            color: #fff;
+            border-radius: 6px;
+            transition: all .2s linear;
+
+            &::before {
+               display: none;
+            }
+
+            &:hover {
+               background: #0e22bb;
+            }
+         }
+      }
+   }
+
+   &-wrapper {
+      display: flex;
+      align-items: center;
+      display: none;
+   }
+
+   .burger__btn {
+      position: relative;
+      height: 18px;
+      width: 40px;
+      
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 4px;
+         background: #000;
+         border-radius: 50px;
+         transition: all .2s linear;
+      }
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 4px;
+         background: #000;
+         border-radius: 50px;
+         transition: all .2s linear;
+      }
+
+      &.active {
+         &::before {
+            top: 6.8px;
+            transform: rotate(30deg);
+         }
+
+         &::after {
+            transform: rotate(-30deg);
+            bottom: 6.8px;
+         }
+      }
+   }
+
+   .call {
+      font-size: 16px;
+      line-height: 16px;
+      padding: 10px;
+      text-transform: uppercase;
+      background: #081158;
+      color: #fff;
+      border-radius: 6px;
+      margin-right: 10px;
+      text-decoration: none;
+   }
+}
+
+.mobile-menu {
+   background: #fff;
+   position: absolute;
+   right: 0;
+   top: 50px;
+   padding: 0 10px 10px 10px;
+   transform: translateY(-100%);
+   z-index: 1;
+   transition: all .3s linear;
+   display: none;
+
+   &.active {
+      transform: translateY(0%);
+   }
+
+   &__item {
+      display: block;
+      text-align: right;
+      text-decoration: none;
+      color: #081158;
+   }
+}
+
+
+
+
+
+//@media=========================================================================================================================
+@media(max-width: 500px) {
+   .header {      
+      &__nav {
+         display: none;
+      }
+      
+      &-wrapper {
+         display: flex;
+      }
+   }
+
+   .mobile-menu {
+      display: block;
+   }
+}
