@@ -89,7 +89,7 @@ body {
       
 
       &-item {
-         font-size: 13px;
+         font-size: 16px;
          line-height: 22px;
          text-decoration: none;
          color: inherit;
@@ -200,7 +200,7 @@ body {
    position: absolute;
    right: 0;
    top: 50px;
-   padding: 0 10px 10px 10px;
+   padding: 0 20px 20px 20px;
    transform: translateY(-100%);
    z-index: 1;
    transition: all .3s linear;
@@ -212,6 +212,8 @@ body {
 
    &__item {
       display: block;
+      font-size: 20px;
+      line-height: 30px;
       text-align: right;
       text-decoration: none;
       color: #081158;
@@ -269,6 +271,19 @@ body {
    }
 }
 
+//============================================================================================================================
+.band {
+   background: #081158;
+
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      padding: 90px;
+      color: #DFDFDF;
+      text-transform: uppercase;
+   }
+}
+
 
 
 
@@ -306,6 +321,12 @@ body {
 
       }
    }
+
+   .band {
+      &__items {
+         padding: 40px;
+      }
+   }
 }
 
 @media(max-width: 768px) {
@@ -333,16 +354,12 @@ body {
             font-size: 30px;
             line-height: 36px;
          }
-
-         p {
-            
-         }
       }
    }
 }
 
 
-@media(max-width: 500px) {
+@media(max-width: 600px) {
    .header {      
       &__nav {
          display: none;
@@ -384,6 +401,21 @@ body {
             display: block;
             margin: 0 auto;
          }
+      }
+   }
+
+   .band {
+      &__items {
+         padding: 20px 10px;
+         font-size: 12px;
+      }
+   }
+}
+
+@media(max-width: 375px) {
+   .band {
+      &__items {
+         font-size: 10px;
       }
    }
 }
