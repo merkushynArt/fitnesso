@@ -346,6 +346,81 @@ section {
 }
 
 
+//=============================================================================================================================
+.plan {
+   .title {
+      font-size: 80px;
+      line-height: 90px;
+      margin-bottom: 30px;
+      max-width: 900px;
+   }
+
+   .after-title {
+      max-width: 600px;
+      margin-bottom: 25px;
+   }
+
+   .btn {
+      margin-bottom: 100px;
+   }
+
+   &__items {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__item {
+      width: 29.68%;
+
+      img {
+         width: 100%;
+         max-height: 400px;
+         object-fit: cover;
+      }
+
+      &-price {
+         padding: 30px 30px 7px;
+         font-size: 14px;
+         line-height: 22px;
+         display: flex;
+         justify-content: space-between;
+
+         .price {
+            font-family: 'Permanent Marker', cursive;
+            color: #EC8675;
+         }
+      }
+
+      &-title {
+         display: flex;
+         align-items: center;
+         height: 60px;
+         font-size: 24px;
+         line-height: 28px;
+         padding: 7px 30px;
+      }
+
+      a {
+         display: inline-block;
+         font-size: 14px;
+         line-height: 22px;
+         color: #081158;
+         text-decoration: none;
+         margin: 7px 30px 30px;
+         padding: 5px 10px;
+         border: 1px solid #081158;
+         border-radius: 50px;
+         transition: all .2s linear;
+
+         &:hover {
+            color: #fff;
+            background: #081158;
+         }
+      }
+   }
+}
+
+
 
 
 
@@ -412,6 +487,33 @@ section {
          }
       }
    }
+
+   .plan {
+
+      .title {
+         font-size: 48px;
+         line-height: 56px;
+         max-width: 600px;
+      }
+
+      .after-title {
+         max-width: 400px;
+      }
+
+      &__item {
+         &-price {
+            padding: 10px 10px 5px;
+         }
+
+         &-title {
+            padding: 5px 10px 5px;
+         }
+
+         a {
+            margin: 5px 10px 5px;
+         }
+      }
+   }
 }
 
 @media(max-width: 768px) {
@@ -437,6 +539,28 @@ section {
          .title {
             font-size: 30px;
             line-height: 36px;
+         }
+      }
+   }
+
+   .plan {
+      &__item {
+         &-price {
+            padding: 10px 10px 5px;
+         }
+
+         &-title {
+            font-size: 14px;
+            line-height: 16px;
+            padding: 5px 10px 5px;
+            height: 40px;
+         }
+
+         a {
+            font-size: 10px;
+            line-height: 12px;
+            padding: 5px 10px;
+            margin: 5px 10px 10px;
          }
       }
    }
@@ -513,6 +637,49 @@ section {
          margin: 0 auto 50px;
       }
    }
+
+   .plan {
+      .title {
+         font-size: 34px;
+         line-height: 42px;
+         text-align: center;
+      }
+
+      .after-title {
+         text-align: center;
+         max-width: 100%;
+      }
+
+      .btn {
+         margin: 0 auto 50px;
+      }
+
+      &__items {
+         display: block;
+      }
+
+      &__item {
+         width: 54%;
+         margin: 0 auto 30px;
+         
+         &-price {
+            padding: 16px 0 8px;
+         }
+
+         &-title {
+            font-size: 26px;
+            line-height: 30px;
+            height: 70px;
+            padding: 8px 0 8px;
+         }
+
+         a {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 8px 0 16px;
+         }
+      }
+   }
 }
 
 @media(max-width: 425px) {
@@ -533,6 +700,40 @@ section {
          &-title {
             font-size: 20px;
             line-height: 26px;
+         }
+      }
+   }
+
+   .plan {
+      .title {
+         font-size: 26px;
+         line-height: 30px;
+         margin-bottom: 10px;
+      }
+
+      .after-title {
+         margin-bottom: 10px;
+      }
+
+      &__item {
+         width: 70%;
+         margin: 0 auto 20px;
+         
+         &-price {
+            padding: 10px 0 5px;
+         }
+
+         &-title {
+            font-size: 20px;
+            line-height: 26px;
+            height: 60px;
+            padding: 5px 0 5px;
+         }
+
+         a {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 5px 0 10px;
          }
       }
    }
