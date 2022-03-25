@@ -348,6 +348,17 @@ section {
 
 //=============================================================================================================================
 .plan {
+   background: #EEF0F4;
+
+   &.bg {
+      background: url('../images/bg1.jpg') 0 0/cover no-repeat !important;
+
+      .title,
+      .after-title {
+         color: #fff;
+      }
+   }
+
    .title {
       font-size: 80px;
       line-height: 90px;
@@ -371,6 +382,7 @@ section {
 
    &__item {
       width: 29.68%;
+      background: #fff;
 
       img {
          width: 100%;
@@ -663,20 +675,20 @@ section {
          margin: 0 auto 30px;
          
          &-price {
-            padding: 16px 0 8px;
+            padding: 16px 10px 8px !important;
          }
 
          &-title {
             font-size: 26px;
             line-height: 30px;
             height: 70px;
-            padding: 8px 0 8px;
+            padding: 8px 10px 8px !important;
          }
 
          a {
             font-size: 16px;
             line-height: 20px;
-            margin: 8px 0 16px;
+            margin: 8px 10px 16px !important;
          }
       }
    }
