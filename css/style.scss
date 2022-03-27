@@ -295,6 +295,29 @@ section {
    }
 }
 
+//============================================================================================================================
+.promo {
+   padding: 0;
+   position: relative;
+
+   img {
+      width: 100%;
+   }
+
+   .promo__text {
+      width: 600px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Permanent Marker', cursive;
+      font-size: 120px;
+      line-height: 130px;
+      text-align: center;
+      color: #fff;
+   }
+}
+
 //about====================================================================================================================
 .about {
    padding-bottom: 0;
@@ -465,6 +488,14 @@ section {
          p {
             margin-bottom: 10px !important;
          }
+      }
+   }
+
+   .promo {
+      &__text {
+         width: 400px !important;
+         font-size: 70px !important;
+         line-height: 76px !important;
       }
    }
 
@@ -639,6 +670,14 @@ section {
       }
    }
 
+   .promo {
+      &__text {
+         font-size: 50px !important;
+         width: 300px !important;
+         line-height: 56px !important;
+      }
+   }
+
    .about {
       .title {
          font-size: 34px;
@@ -699,6 +738,14 @@ section {
       .title {
          font-size: 26px;
          line-height: 30px;
+      }
+   }
+
+   .promo {
+      &__text {
+         width: 200px !important;
+         font-size: 40px !important;
+         line-height: 46px !important;
       }
    }
 
