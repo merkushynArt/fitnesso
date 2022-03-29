@@ -488,6 +488,76 @@ section {
    }
 }
 
+//===========================================================================================================================
+.social {
+   background: #DFDFDF;
+   
+   &__items {
+      position: relative;
+   }
+
+   &__item-wrapper {
+      display: flex;
+      animation: textAnim 50s linear infinite;
+
+      &.reverse {
+         animation: textAnim1 50s linear infinite;
+      }
+   }
+
+   &__item {
+      display: flex;
+      overflow: hidden;
+      
+
+      &:first-child {
+         margin-bottom: 100px;
+      }
+
+      img {
+         display: block;
+         width: 400px !important;
+         height: 400px;
+         object-fit: cover;
+         background: red;
+         margin: 0 50px;
+      }
+   }
+
+   &-wrapper {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      padding: 100px;
+      background: #EC8675;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+         text-decoration: none;
+         color: #fff;
+
+         img {
+            width: 50px;
+            height: 50px;
+         }
+      }
+   }
+
+   @keyframes textAnim {
+      0%   {transform: translateX(0%);}
+      100% {transform: translateX(-100%);}
+   }
+
+   @keyframes textAnim1 {
+      0%   {transform: translateX(-100%);}
+      100% {transform: translateX(0%);}
+   }
+
+}
+
 
 
 
@@ -512,6 +582,24 @@ section {
             line-height: 50px;
             margin-bottom: 10px;
          }
+      }
+   }
+
+   .social {
+      &__item {
+         &:first-child {
+            margin-bottom: 0px;
+         }
+
+         img {
+            width: 300px !important;
+            height: 300px;
+            margin: 0 20px;
+         }
+      }
+
+      .social-wrapper {
+         padding: 20px;
       }
    }
 }
@@ -657,6 +745,29 @@ section {
             line-height: 12px;
             padding: 5px 10px;
             margin: 5px 10px 10px;
+         }
+      }
+   }
+
+   .social {
+      &__item {
+         &:first-child {
+            margin-bottom: 0px;
+         }
+
+         img {
+            width: 150px !important;
+            height: 150px !important;
+            margin: 0 20px;
+         }
+      }
+
+      .social-wrapper {
+         padding: 10px;
+
+         img {
+            width: 30px;
+            height: 30px;
          }
       }
    }
@@ -812,6 +923,19 @@ section {
          .btn {
             margin: 0 auto 30px;
          }
+      }
+   }
+}
+
+@media(max-width: 500px) {
+   .social {
+      .social-wrapper {
+         padding: 10px 40px;
+         span {
+            display: none;
+         }
+
+         
       }
    }
 }
