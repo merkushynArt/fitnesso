@@ -455,6 +455,39 @@ section {
    }
 }
 
+//==========================================================================================================================
+.plan-order {
+   &__items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__item {
+      width: 50%;
+
+      &:last-child {
+         width: 48%;
+         background: url('../images/bg2.jpg') 0 0/cover no-repeat !important;
+      }
+
+      .title {
+         font-size: 60px;
+         line-height: 70px;
+         margin-bottom: 30px;
+         max-width: 600px;
+      }
+
+      .after-title {
+         margin-bottom: 25px;
+      }
+
+      img {
+         width: 100%;
+      }
+   }
+}
+
 
 
 
@@ -468,6 +501,16 @@ section {
          .title {
             font-size: 48px;
             line-height: 56px;
+         }
+      }
+   }
+
+   .plan-order {
+      &__item {
+         .title {
+            font-size: 46px;
+            line-height: 50px;
+            margin-bottom: 10px;
          }
       }
    }
@@ -554,6 +597,16 @@ section {
 
          a {
             margin: 5px 10px 5px;
+         }
+      }
+   }
+
+   .plan-order {
+      &__item {
+         .title {
+            font-size: 30px;
+            line-height: 36px;
+            margin-bottom: 10px;
          }
       }
    }
@@ -731,6 +784,36 @@ section {
          }
       }
    }
+
+   .plan-order {
+      &__items {
+         display: block;
+      }
+
+      &__item {
+         width: 100%;
+
+         &:last-child {
+            width: 70%;
+            margin: 0 auto;
+         }
+
+         .title {
+            font-size: 29px;
+            line-height: 36px;
+            text-align: center;
+            margin-bottom: 10px;
+         }
+
+         .after-title {
+            text-align: center;
+         }
+
+         .btn {
+            margin: 0 auto 30px;
+         }
+      }
+   }
 }
 
 @media(max-width: 425px) {
@@ -802,6 +885,15 @@ section {
    .band {
       &__items {
          font-size: 10px;
+      }
+   }
+
+   .plan-order {
+      &__item {
+         .title {
+            font-size: 24px;
+            line-height: 30px;
+         }
       }
    }
 }
