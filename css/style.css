@@ -33,7 +33,7 @@ section {
 
 .btn {
   display: block;
-  width: 200px;
+  width: 210px;
   text-decoration: none;
   font-size: 14px;
   line-height: 22px;
@@ -80,7 +80,7 @@ section {
   font-weight: bold;
   color: #000;
   text-decoration: none;
-  margin-right: 20px;
+  margin-right: 10px;
   position: relative;
 }
 
@@ -649,6 +649,72 @@ section {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
+}
+
+.footer {
+  background: #081158;
+  padding: 10px 0;
+}
+
+.footer__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer .logo {
+  font-size: 36px;
+  line-height: 36px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.footer .logo::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 92px;
+  height: 3px;
+  background: #fff;
+}
+
+.footer .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .contacts a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.footer .contacts .btn {
+  border-left: 2px solid #fff;
+  border-radius: 0;
+  padding: 10px;
+  width: auto;
+}
+
+.footer .licencing {
+  width: 100% !important;
+  text-align: center;
+  color: #fff;
+  margin-top: 5px;
 }
 
 @media (max-width: 1130px) {

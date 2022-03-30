@@ -33,7 +33,7 @@ section {
 
 .btn {
    display: block;
-   width: 200px;
+   width: 210px;
    text-decoration: none;
    font-size: 14px;
    line-height: 22px;
@@ -73,7 +73,7 @@ section {
       font-weight: bold;
       color: #000;
       text-decoration: none;
-      margin-right: 20px;
+      margin-right: 10px;
       position: relative;
 
       &::before {
@@ -488,6 +488,7 @@ section {
    }
 }
 
+
 //===========================================================================================================================
 .social {
    background: #DFDFDF;
@@ -559,6 +560,63 @@ section {
 }
 
 
+//====================================================================================================================
+.footer {
+   background: #081158;
+   padding: 10px 0;
+
+   &__items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+   }
+
+   .logo {
+      font-size: 36px;
+      line-height: 36px;
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      margin-right: 20px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 5px;
+         right: 0;
+         width: 92px;
+         height: 3px;
+         background: #fff;
+      }
+   }
+
+   .contacts {
+      display: flex;
+      align-items: center;
+
+      a {
+         color: #fff;
+         text-decoration: none;
+         margin-right: 10px;
+      }
+
+      .btn {
+         border-left: 2px solid #fff;
+         border-radius: 0;
+         padding: 10px;
+         width: auto;
+      }
+   }
+
+   .licencing {
+      width: 100% !important;
+      text-align: center;
+      color: #fff;
+      margin-top: 5px;
+   }
+}
 
 
 
