@@ -9,6 +9,10 @@ font-family: 'Roboto', sans-serif;
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Red Hat Display', sans-serif;
   font-size: 20px;
@@ -223,31 +227,49 @@ section {
 }
 
 .mobile-menu {
-  background: #fff;
+  /*
+   background: #fff;
+   position: fixed;
+   right: 0;
+   top: 50px;
+   padding: 0 20px 20px 20px;
+   transform: translateY(-100%);
+   z-index: 1;
+   transition: all .3s linear;
+   display: none;
+   */
+  background: transparent;
   position: fixed;
   right: 0;
   top: 50px;
-  padding: 0 20px 20px 20px;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  z-index: 1;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
+  z-index: 1;
   display: none;
 }
 
 .mobile-menu.active {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .mobile-menu__item {
+  /*display: block;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: right;
+      text-decoration: none;
+      color: #081158;*/
   display: block;
-  font-size: 20px;
-  line-height: 30px;
-  text-align: right;
-  text-decoration: none;
+  margin: 20px 0;
+  font-size: 26px;
+  line-height: 26px;
   color: #081158;
+  background: #fff;
+  padding: 10px;
+  text-decoration: none;
 }
 
 .main {

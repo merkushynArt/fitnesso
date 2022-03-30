@@ -9,6 +9,10 @@ font-family: 'Roboto', sans-serif;
    box-sizing: border-box;
 }
 
+html {
+   scroll-behavior: smooth;
+}
+
 body {
    font-family: 'Red Hat Display', sans-serif;
    font-size: 20px;
@@ -204,6 +208,7 @@ section {
 }
 
 .mobile-menu {
+   /*
    background: #fff;
    position: fixed;
    right: 0;
@@ -213,18 +218,38 @@ section {
    z-index: 1;
    transition: all .3s linear;
    display: none;
+   */
+
+   background: transparent;
+   position: fixed;
+   right: 0;
+   top: 50px;
+   transform: translateX(100%);
+   transition: all .3s linear;
+   z-index: 1;
+   display: none;
 
    &.active {
-      transform: translateY(0%);
+      //transform: translateY(0%);
+      transform: translateX(0%);
    }
 
    &__item {
-      display: block;
+      /*display: block;
       font-size: 20px;
       line-height: 30px;
       text-align: right;
       text-decoration: none;
+      color: #081158;*/
+
+      display: block;
+      margin: 20px 0;
+      font-size: 26px;
+      line-height: 26px;
       color: #081158;
+      background: #fff;
+      padding: 10px;
+      text-decoration: none;
    }
 }
 
