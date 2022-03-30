@@ -58,6 +58,50 @@ section {
   background: #0e22bb;
 }
 
+@-webkit-keyframes textAnim {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes textAnim {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes textAnim1 {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes textAnim1 {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
 .header {
   padding: 7px 0;
   background: #fff;
@@ -227,17 +271,6 @@ section {
 }
 
 .mobile-menu {
-  /*
-   background: #fff;
-   position: fixed;
-   right: 0;
-   top: 50px;
-   padding: 0 20px 20px 20px;
-   transform: translateY(-100%);
-   z-index: 1;
-   transition: all .3s linear;
-   display: none;
-   */
   background: transparent;
   position: fixed;
   right: 0;
@@ -256,12 +289,6 @@ section {
 }
 
 .mobile-menu__item {
-  /*display: block;
-      font-size: 20px;
-      line-height: 30px;
-      text-align: right;
-      text-decoration: none;
-      color: #081158;*/
   display: block;
   margin: 20px 0;
   font-size: 26px;
@@ -334,19 +361,24 @@ section {
 
 .band {
   background: #081158;
-  padding: 0;
+  font-size: 70px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: #fff;
+  overflow: hidden;
 }
 
 .band__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 90px;
-  color: #DFDFDF;
-  text-transform: uppercase;
+  -webkit-animation: textAnim1 20s linear infinite;
+          animation: textAnim1 20s linear infinite;
+}
+
+.band__item {
+  margin: 0 60px;
+  white-space: nowrap;
 }
 
 .promo {
@@ -629,17 +661,6 @@ section {
   height: 50px;
 }
 
-@-webkit-keyframes textAnim {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
 @keyframes textAnim {
   0% {
     -webkit-transform: translateX(0%);
@@ -648,17 +669,6 @@ section {
   100% {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
-  }
-}
-
-@-webkit-keyframes textAnim1 {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
   }
 }
 
@@ -747,6 +757,11 @@ section {
     font-size: 48px;
     line-height: 56px;
   }
+  .band {
+    padding: 50px 0;
+    font-size: 50px;
+    line-height: 50px;
+  }
   .plan-order__item .title {
     font-size: 46px;
     line-height: 50px;
@@ -782,9 +797,6 @@ section {
     width: 400px !important;
     font-size: 70px !important;
     line-height: 76px !important;
-  }
-  .band__items {
-    padding: 40px;
   }
   .about .title {
     font-size: 48px;
@@ -848,6 +860,11 @@ section {
   .main__item .title {
     font-size: 30px;
     line-height: 36px;
+  }
+  .band {
+    padding: 30px 0;
+    font-size: 26px;
+    line-height: 26px;
   }
   .plan__item-price {
     padding: 10px 10px 5px;
@@ -921,10 +938,6 @@ section {
   .main__item .btn {
     margin: 0 auto;
   }
-  .band__items {
-    padding: 20px 10px;
-    font-size: 12px;
-  }
   .promo__text {
     font-size: 50px !important;
     width: 300px !important;
@@ -995,6 +1008,14 @@ section {
 }
 
 @media (max-width: 500px) {
+  .band {
+    padding: 20px 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .band__item {
+    margin: 0 20px;
+  }
   .social .social-wrapper {
     padding: 10px 40px;
   }
@@ -1050,9 +1071,6 @@ section {
 }
 
 @media (max-width: 375px) {
-  .band__items {
-    font-size: 10px;
-  }
   .plan-order__item .title {
     font-size: 24px;
     line-height: 30px;

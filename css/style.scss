@@ -57,6 +57,18 @@ section {
    }
 }
 
+//animation===============================================================================================================
+@keyframes textAnim {
+   0%   {transform: translateX(0%);}
+   100% {transform: translateX(-100%);}
+}
+
+@keyframes textAnim1 {
+   0%   {transform: translateX(-100%);}
+   100% {transform: translateX(0%);}
+}
+
+
 //============================================================================================================================
 .header {
    padding: 7px 0;
@@ -208,18 +220,6 @@ section {
 }
 
 .mobile-menu {
-   /*
-   background: #fff;
-   position: fixed;
-   right: 0;
-   top: 50px;
-   padding: 0 20px 20px 20px;
-   transform: translateY(-100%);
-   z-index: 1;
-   transition: all .3s linear;
-   display: none;
-   */
-
    background: transparent;
    position: fixed;
    right: 0;
@@ -230,18 +230,10 @@ section {
    display: none;
 
    &.active {
-      //transform: translateY(0%);
       transform: translateX(0%);
    }
 
    &__item {
-      /*display: block;
-      font-size: 20px;
-      line-height: 30px;
-      text-align: right;
-      text-decoration: none;
-      color: #081158;*/
-
       display: block;
       margin: 20px 0;
       font-size: 26px;
@@ -309,14 +301,21 @@ section {
 //============================================================================================================================
 .band {
    background: #081158;
-   padding: 0;
+   font-size: 70px;
+   line-height: 70px;
+   text-transform: uppercase;
+   color: #fff;
+   overflow: hidden;
+
 
    &__items {
       display: flex;
-      justify-content: space-between;
-      padding: 90px;
-      color: #DFDFDF;
-      text-transform: uppercase;
+      animation: textAnim1 20s linear infinite;
+   }
+
+   &__item {
+      margin: 0 60px;
+      white-space: nowrap;
    }
 }
 
@@ -658,6 +657,12 @@ section {
       }
    }
 
+   .band {
+      padding: 50px 0;
+      font-size: 50px;
+      line-height: 50px;
+   }
+
    .plan-order {
       &__item {
          .title {
@@ -710,12 +715,6 @@ section {
          width: 400px !important;
          font-size: 70px !important;
          line-height: 76px !important;
-      }
-   }
-
-   .band {
-      &__items {
-         padding: 40px;
       }
    }
 
@@ -808,6 +807,12 @@ section {
             line-height: 36px;
          }
       }
+   }
+
+   .band {
+      padding: 30px 0;
+      font-size: 26px;
+      line-height: 26px;
    }
 
    .plan {
@@ -909,14 +914,6 @@ section {
       }
    }
 
-   .band {
-
-      &__items {
-         padding: 20px 10px;
-         font-size: 12px;
-      }
-   }
-
    .promo {
       &__text {
          font-size: 50px !important;
@@ -1011,6 +1008,16 @@ section {
 }
 
 @media(max-width: 500px) {
+   .band {
+      padding: 20px 0;
+      font-size: 20px;
+      line-height: 20px;
+
+      &__item {
+         margin: 0 20px;
+      }
+   }
+
    .social {
       .social-wrapper {
          padding: 10px 40px;
@@ -1089,11 +1096,7 @@ section {
 }
 
 @media(max-width: 375px) {
-   .band {
-      &__items {
-         font-size: 10px;
-      }
-   }
+   
 
    .plan-order {
       &__item {
